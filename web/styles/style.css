@@ -1,0 +1,61 @@
+h1 {
+  font-family: 'ZCOOL KuaiLe', cursive;
+  font-family: 'Major Mono Display', monospace;
+  background-color: white;
+
+}
+
+h2 {
+  font-size: 50px;
+  color: white;
+  text-align: center;
+  font-family: 'Major Mono Display', monospace;
+  
+}
+
+h3 {
+  color: white;
+  text-align: center;
+}
+
+p {
+  font-size: 20px;
+  line-height: 3;
+  letter-spacing: 1px;
+  margin:  20px 0 0 130px;
+  font-family: 'Shadows Into Light', cursive;
+  font-family: 'Indie Flower', cursive;
+}
+
+body {
+  margin: 30px auto;
+  background-color: white;
+}
+
+
+img {
+  width: 100px;
+  vertical-align:middle;
+}
+
+a {
+    text-decoration:none;
+    color:black;
+}
+
+header {
+      width:1200px;
+      height: 100px;
+      margin:auto;
+      background-color: white;
+}
+
+article {
+  color: white;
+  background: black;
+}
+
+video {
+  width:800px;
+  height:800px;
+}
