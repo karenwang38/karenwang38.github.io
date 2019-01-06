@@ -28,7 +28,7 @@ p {
 }
 
 body {
-  margin: 30px auto;
+  margin: 3% auto;
   background-color: white;
 }
 
@@ -44,7 +44,7 @@ img {
   height: auto;
   max-width: 100%;
 }
-  
+
 
 .logo {
   width: 100px;
@@ -58,7 +58,7 @@ a {
 }
 
 header {
-      width:1200px;
+      max-width:85%;
       height: 100px;
       margin:auto;
       background-color: white;
@@ -69,24 +69,32 @@ article {
   background: black;
 }
 
+
 video {
   width:800px;
   height:800px;
 }
+
+
+
 
 /*
 Media Query ，也就是當寬度 < 768 px 時將載入下面這段 CSS :
 */
 @media only screen and (max-width: 768px) {
   video {
-    width:800px;
-    height:800px;
+    width:80px;
+    height:80px;
   }
 }
 /* Media Query ，也就是當寬度 < 480 px 時將載入下面這段 CSS :
 */
 @media only screen and (max-width: 480px) {
   video {
+    /*
+    height: auto;
+    max-width: 100%;
+    */
     width:80px;
     height:80px;
   }
@@ -95,7 +103,11 @@ Media Query ，也就是當寬度 < 768 px 時將載入下面這段 CSS :
 */
 @media only screen and (max-width: 320px) {
   video {
-    width:20px;
-    height:20px;
+    /*
+    height: auto;
+    max-width: 100%;
+    */
+    width:80px;
+    height:80px;
   }
 }
