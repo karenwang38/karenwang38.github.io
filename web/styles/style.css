@@ -95,7 +95,7 @@ Media Query ，也就是當寬度 < 768 px 時將載入下面這段 CSS :
 */
 @media only screen and (max-width: 320px) {
   video {
-    width:8px;
-    height:8px;
+    width:20px;
+    height:20px;
   }
 }
