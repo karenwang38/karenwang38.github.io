@@ -10,7 +10,7 @@ h2 {
   color: white;
   text-align: center;
   font-family: 'Major Mono Display', monospace;
-  
+
 }
 
 h3 {
@@ -32,10 +32,24 @@ body {
   background-color: white;
 }
 
-
+/*
 img {
   width: 100px;
   vertical-align:middle;
+}
+*/
+
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+  
+
+.logo {
+  width: 100px;
+  vertical-align:middle;
+
 }
 
 a {
@@ -81,7 +95,7 @@ Media Query ，也就是當寬度 < 768 px 時將載入下面這段 CSS :
 */
 @media only screen and (max-width: 320px) {
   video {
-    width:80px;
-    height:80px;
+    width:8px;
+    height:8px;
   }
 }
