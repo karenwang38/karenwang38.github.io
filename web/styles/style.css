@@ -22,6 +22,15 @@ p {
   font-size: 20px;
   line-height: 3;
   letter-spacing: 1px;
+  margin:  20px 0 0 130px;
+  font-family: 'Shadows Into Light', cursive;
+  font-family: 'Indie Flower', cursive;
+}
+
+.context {
+  font-size: 20px;
+  line-height: 3;
+  letter-spacing: 1px;
   margin:  20px 0 0 0;
   font-family: 'Shadows Into Light', cursive;
   font-family: 'Indie Flower', cursive;
