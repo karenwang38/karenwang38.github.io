@@ -18,7 +18,7 @@ h3 {
   text-align: center;
 }
 
-p {
+p, li {
   font-size: 20px;
   line-height: 3;
   letter-spacing: 1px;
@@ -29,11 +29,19 @@ p {
 
 .context {
   font-size: 20px;
-  line-height: 3;
+  line-height: 1;
   letter-spacing: 1px;
   margin:  20px 0 0 0;
   font-family: 'Shadows Into Light', cursive;
   font-family: 'Indie Flower', cursive;
+}
+
+.footer {
+  color: white;
+  background: black;
+  margin:auto;
+  height: auto;
+  padding: 40px 0 5px 0;
 }
 
 body {
@@ -49,7 +57,6 @@ img {
 }
 */
 
-
 img {
   height: auto;
   max-width: 100%;
@@ -60,6 +67,11 @@ img {
   width: 100px;
   vertical-align:middle;
 
+}
+
+.blogtitle {
+  max-width: 100%;
+  background: black
 }
 
 a {
@@ -85,6 +97,7 @@ video {
   height: auto;
   padding: 100px 0 0 0;
 }
+
 
 
 
