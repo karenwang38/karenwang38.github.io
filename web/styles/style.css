@@ -19,13 +19,17 @@ h3 {
   text-align: center;
 }
 
-p, li {
+p {
   font-size: 20px;
   line-height: 3;
   letter-spacing: 1px;
   margin:  20px 0 0 130px;
   font-family: 'Shadows Into Light', cursive;
   font-family: 'Indie Flower', cursive;
+}
+
+li {
+
 }
 
 .context, td {
@@ -71,6 +75,11 @@ img {
 img {
   height: auto;
   max-width: 100%;
+}
+
+.blogtitlepic {
+  display: flow-root;
+  margin: 0 auto;
 }
 
 
