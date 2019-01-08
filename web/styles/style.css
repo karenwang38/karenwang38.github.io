@@ -118,6 +118,8 @@ video {
 
 
 
+
+
 /*
 Media Query ，也就是當寬度 < 768 px 時將載入下面這段 CSS :
 */
@@ -125,6 +127,10 @@ Media Query ，也就是當寬度 < 768 px 時將載入下面這段 CSS :
   video {
     width:80px;
     height:80px;
+  }
+
+  h1, h2, h3.sharinglist {
+    font-size: 10px;
   }
 }
 /* Media Query ，也就是當寬度 < 480 px 時將載入下面這段 CSS :
