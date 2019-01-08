@@ -39,9 +39,9 @@ p, li {
 
 .sharinglist {
   font-size: 18px;
-  line-height:   2;
+  line-height:   1;
   letter-spacing: 1px;
-  margin:  20px 0 0 0;
+  margin:  10px 0 0 0;
   font-family: 'Noto Sans TC', sans-serif;
 }
 
@@ -114,7 +114,7 @@ article {
 
 
 video {
-  width:800px;
+  width:50%;
   height: auto;
   padding: 100px 0 0 0;
 }
@@ -136,6 +136,11 @@ Media Query ，也就是當寬度 < 768 px 時將載入下面這段 CSS :
 
   h1, h2, h3, .sharinglist, td{
     font-size: 10px;
+  }
+
+  .blogpage {
+    height: auto;
+    max-width: 100%;
   }
 }
 /* Media Query ，也就是當寬度 < 480 px 時將載入下面這段 CSS :
