@@ -28,7 +28,7 @@ p, li {
   font-family: 'Indie Flower', cursive;
 }
 
-.context {
+.context, td {
   font-size: 20px;
   line-height: 1;
   letter-spacing: 1px;
@@ -39,7 +39,7 @@ p, li {
 
 .sharinglist {
   font-size: 18px;
-  line-height: 1;
+  line-height:   2;
   letter-spacing: 1px;
   margin:  20px 0 0 0;
   font-family: 'Noto Sans TC', sans-serif;
@@ -75,14 +75,19 @@ img {
 
 
 .logo {
-  width: 100px;
+  width: 8%;
   vertical-align:middle;
 
 }
 
 .blogtitle {
   max-width: 100%;
-  background: black
+  background: black;
+}
+
+.blogpage {
+  max-width: 40%;
+  background: black;
 }
 
 a {
@@ -129,8 +134,8 @@ Media Query ，也就是當寬度 < 768 px 時將載入下面這段 CSS :
     height:80px;
   }
 
-  h1, h2, h3 {
-    font-size: 5px;
+  h1, h2, h3, .sharinglist, td{
+    font-size: 10px;
   }
 }
 /* Media Query ，也就是當寬度 < 480 px 時將載入下面這段 CSS :
