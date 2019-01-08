@@ -130,7 +130,7 @@ Media Query ，也就是當寬度 < 768 px 時將載入下面這段 CSS :
   }
 
   h1, h2, h3 {
-    font-size: 10px;
+    font-size: 5px;
   }
 }
 /* Media Query ，也就是當寬度 < 480 px 時將載入下面這段 CSS :
