@@ -111,7 +111,7 @@ a {
 
 header {
       max-width:85%;
-      height: 70px;
+      height: 80px;
       margin:auto;
       background-color: white;
 }
@@ -119,6 +119,7 @@ header {
 article {
   color: white;
   background: black;
+  margin: 5% 0 0 0;
 }
 
 
