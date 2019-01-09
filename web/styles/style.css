@@ -1,6 +1,7 @@
 h1 {
+  font-size: 25px;
   font-family: 'ZCOOL KuaiLe', cursive;
-  font-family: 'Major Mono Display', monospace;
+  font-family: 'Open Sans Condensed', sans-serif;
   background-color: white;
 
 }
@@ -111,7 +112,7 @@ a {
 
 header {
       max-width:85%;
-      height: 80px;
+      height: 5%;
       margin:auto;
       background-color: white;
 }
@@ -145,7 +146,7 @@ Media Query ，也就是當寬度 < 768 px 時將載入下面這段 CSS :
   }
 
   h1, h2, h3, .sharinglist, td, th, .footer, .context {
-    font-size: 15px;
+    font-size: 10px;
   }
 
   .blogpage {
