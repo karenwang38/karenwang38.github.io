@@ -27,6 +27,7 @@ p {
   margin:  20px 0 0 130px;
   font-family: 'Shadows Into Light', cursive;
   font-family: 'Indie Flower', cursive;
+  word-wrap:break-word;
 }
 
 li {
@@ -40,6 +41,7 @@ li {
   margin:  20px 0 0 0;
   font-family: 'Shadows Into Light', cursive;
   font-family: 'Indie Flower', cursive;
+  word-wrap:break-word;
 }
 
 .sharinglist {
@@ -171,7 +173,7 @@ Media Query ，也就是當寬度 < 768 px 時將載入下面這段 CSS :
     height:80px;
   }
 
-  h1, h2, h3, .sharinglist, td, th, .footer, .context, .blogcontext{
+  h1, h2, h3, .sharinglist, td, th, .footer, .context, .blogcontext, ol, ul, em{
     font-size: 10px;
   }
 
