@@ -89,6 +89,11 @@ img {
   max-width: 100%;
 }
 
+.lineimg {
+
+  max-width: 10%;
+}
+
 .blogtitlepic {
   display: flow-root;
   margin: 0 auto;
@@ -156,7 +161,7 @@ video {
   padding: 100px 0 0 0;
 }
 
-ol {
+ul {
   margin: 0 25% 0 25%;
 }
 
