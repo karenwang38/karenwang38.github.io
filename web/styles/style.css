@@ -178,8 +178,13 @@ Media Query ，也就是當寬度 < 768 px 時將載入下面這段 CSS :
     height:80px;
   }
 
-  h1, h2, h3, .sharinglist, td, th, .footer, .context, .blogcontext, ol, ul, em{
+  h1, h2, h3, .sharinglist, td, th, .footer, .context, ol, ul, em{
     font-size: 10px;
+  }
+
+  .blogcontext, ul {
+    font-size: 10px;
+    margin:  auto;
   }
 
   .blogpage, .greatpic {
