@@ -112,6 +112,11 @@ img {
 }
 
 .blogpage {
+  max-width: 60%;
+  background: black;
+}
+
+.bloghomepage {
   max-width: 40%;
   background: black;
 }
