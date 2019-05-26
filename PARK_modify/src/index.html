@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>AirParking</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
+    <a href="#book" class="w3-bar-item w3-button w3-padding-large w3-hide-small">BOOK</a>
+    <a href="#airParking_register" class="w3-bar-item w3-button w3-padding-large w3-hide-small">REGISTER</a>
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="#" class="w3-bar-item w3-button">Merchandise</a>
+        <a href="#" class="w3-bar-item w3-button">Extras</a>
+        <a href="#" class="w3-bar-item w3-button">Media</a>
+      </div>
+    </div>
+    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+  </div>
+</div>
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="#about" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ABOUT</a>
+  <a href="#book" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">BOOK</a>
+  <a href="#register" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">REGISTER</a>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a>
+</div>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+  <!-- Automatic Slideshow Images -->
+  <div class="mySlides w3-display-container w3-center">
+    <img src="./pic/map.jpg" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <h3>Taipei 101</h3>
+      <p><b>The highest build in Taiwan!</b></p>
+    </div>
+  </div>
+  <div class="mySlides w3-display-container w3-center">
+    <img src="./pic/map.jpg" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <h3>Taichung</h3>
+      <p><b>Beautiful landscape!</b></p>
+    </div>
+  </div>
+  <div class="mySlides w3-display-container w3-center">
+    <img src="./pic/map.jpg" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <h3>Kaohsiung</h3>
+      <p><b>Make a fortune!</b></p>
+    </div>
+  </div>
+
+  <!-- The about Section -->
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="about">
+    <h2 class="w3-wide">AirParking</h2>
+    <p class="w3-opacity"><i>Parking Easy</i></p>
+    <p class="w3-justify">We are integring parking lot to easy parking. Buy APtoken will get grouppon discount to park! Buy APtoken & Join us.</p>
+
+    <div class="w3-row w3-padding-32">
+      <div class="w3-third">
+        <p><b>AirParking Information</b></p>
+
+        <p id="contractBalance"></p>
+        <p id="userRignt"></p>
+
+      </div>
+      <div class="w3-third">
+        <p><b>AP token</b></p>
+        <p id="APtokenBalance"></p>
+        <input size="3" value="3" id="ethAmount"> Eth
+        <button class="w3-button w3-black w3-margin-bottom" onclick="App.buyToken()">BUY</button>
+      </div>
+      <div class="w3-third">
+        <p><b>Payment</b></p>
+        <form onSubmit="App.ParkPay(); return false;">
+
+        <input class="w3-input w3-border" type="text" id="paymentParkId" placeholder="ParkLot ID" required name="ParkLot ID">
+        <input class="w3-input w3-border" type="text" id="paymentPrice" placeholder="ETH Price" required name="ETH Price">
+
+        <button class="w3-button w3-black w3-margin-bottom" onclick="App.ParkPay()">Pay</button>
+        <input class="w3-input w3-border" type="text" id="paymentTokenPrice" placeholder="AP Price" required name="AP Price">
+        <button class="w3-button w3-black w3-margin-bottom" onclick="App.APtokenPay()">Pay</button>
+        <br>
+
+        <hr>
+        </form>
+      </div>
+
+
+    </div>
+  </div>
+
+  <!-- The BOOK Section -->
+  <div class="w3-black" id="book">
+    <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+      <h2 class="w3-wide w3-center">BOOK</h2>
+      <p class="w3-opacity w3-center"><i>Remember to book your parking lot!</i></p><br>
+
+
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Empty</th>
+            <th scope="col">Total</th>
+            <th scope="col">Price(Eth)</th>
+            <th scope="col">Deposit(Eth)</th>
+            <th scope="col">Park Owner Address</th>
+            <th scope="col">Valid</th>
+          </tr>
+        </thead>
+        <tbody id="parkLotInfo">
+        </tbody>
+      </table>
+
+      <label for="parkingLotSelect">Select Parking Lot</label>
+      <select class="form-control" id="parkingLotSelect">
+      </select>
+      <p id="spaceInfo"></p>
+      <input type="button" class="btn btn-primary" value="Search Space" name="Search Space" onclick="App.SearchSpace()">
+
+
+
+      <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+        <div class="w3-third w3-margin-bottom">
+          <img src="./pic/newyork.jpg" alt="New York" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>Taipei 101</b></p>
+            <p class="w3-opacity">台北市信義區信義路五段7號</p>
+            <p id="oneOone_deposit">訂金:1</p>
+            <p id="oneOone_empty">空位:1</p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Booking</button>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img src="./pic/paris.jpg" alt="Paris" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>台中水岸廊道</b></p>
+            <p class="w3-opacity">台中市南屯區筏子東街</p>
+            <p>訂金:2</p>
+            <p>空位:3</p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Booking</button>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img src="./pic/sanfran.jpg" alt="San Francisco" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>高雄發大財</b></p>
+            <p class="w3-opacity">高雄發財路</p>
+            <p>訂金:2</p>
+            <p>空位:2</p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Booking</button>
+          </div>
+        </div>
+      </div>
+
+      預訂查詢
+      <br>
+      預定編號:
+      <input size="3" value="2" id="reserveId">
+      <input type="button" class="btn btn-primary" value="Check" name="Check" onclick="App.ReserveCheck()">
+      <input type="button" class="btn btn-primary" value="Cancel" name="Reservation Cancel" onclick="App.ReservationCancel()">
+      <input type="button" class="btn btn-primary" value="Parking" name="Reservation Parking" onclick="App.ReservationParking()">
+
+      <div id="reserveInfo"></div>
+      <br>
+
+      <input size="15" value="2" id="changeTime">
+      <input type="button" class="btn btn-primary" value="Change Reserve Time(for testing)" name="Change Reserve Time" onclick="App.ChangeReserveTime()">
+
+
+
+
+    </div>
+  </div>
+
+
+
+  <!-- Ticket Modal -->
+  <div id="ticketModal" class="w3-modal">
+    <div class="w3-modal-content w3-animate-top w3-card-4">
+      <header class="w3-container w3-teal w3-center w3-padding-32">
+        <span onclick="document.getElementById('ticketModal').style.display='none'"
+       class="w3-button w3-teal w3-xlarge w3-display-topright">×</span>
+        <h2 class="w3-wide"><i class="fa fa-suitcase w3-margin-right"></i>Tickets</h2>
+      </header>
+      <div class="w3-container">
+        <p><label><i class="fa fa-shopping-cart"></i> Space ID</label></p>
+        <input class="w3-input w3-border" type="text" id="spaceId" placeholder="Space ID: 1?">
+        <p><label><i class="fa fa-user"></i> Time</label></p>
+        <input class="w3-input w3-border" type="text" id="booktime" placeholder="Time(hour)">
+        <button class="w3-button w3-block w3-teal w3-padding-16 w3-section w3-right" onclick="App.Book()">BOOKING <i class="fa fa-check"></i></button>
+        <button class="w3-button w3-red w3-section" onclick="document.getElementById('ticketModal').style.display='none'">Close <i class="fa fa-remove"></i></button>
+        <p class="w3-right">Need <a href="#" class="w3-text-blue">help?</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- The Register Section -->
+  <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="airParking_register">
+    <h2 class="w3-wide w3-center">REGISTER</h2>
+    <p class="w3-opacity w3-center"><i>Fan? Drop a note!</i></p>
+    <div class="w3-row w3-padding-32">
+      <div class="w3-col m6 w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker" style="width:30px"></i> Taipei, TW<br>
+        <i class="fa fa-phone" style="width:30px"></i> Phone: +886 9 82282641<br>
+        <i class="fa fa-envelope" style="width:30px"> </i> Email: karen.wang38@gmail.com<br>
+      </div>
+      <div class="w3-col m6">
+        <!--
+        <form action="/action_page.php" target="_blank">
+        -->
+          <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+            <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+          </div>
+          <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+            <input class="w3-input w3-border" type="text" placeholder="Location" required name="Location">
+          </div>
+          <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+            <input class="w3-input w3-border" type="text" placeholder="Phone" required name="Phone">
+          </div>
+          <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+            <input class="w3-input w3-border" type="text" id="price" placeholder="Price:1" required name="Price">
+          </div>
+          <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+            <input class="w3-input w3-border" type="text" id="deposit" placeholder="Deposit:1" required name="Deposit">
+          </div>
+          <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+            <input class="w3-input w3-border" type="text" id="total" placeholder="Space Number:5" required name="Space Number">
+          </div>
+          <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+            <input class="w3-input w3-border" type="text" id="parkingOwner" placeholder="parking Lot Address" required name="Message">
+          </div>
+          <button class="w3-button w3-black w3-section w3-right" onclick="App.ParkRegister()" type="submit">SEND</button>
+        <!--
+        </form>
+      -->
+
+      </div>
+    </div>
+  </div>
+
+  <!-- The Parking Lot Admin Section -->
+  <div class="w3-black" id="parkingLogAdmin">
+    <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+      <h2 class="w3-wide w3-center">Parking Lot</h2>
+      <p class="w3-opacity w3-center"><i>Manage your parking lot!</i></p><br>
+
+
+
+
+      <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+        <input class="w3-input w3-border" type="text" id="ParLotkId" placeholder="ParkLot ID" required name="ParkLot ID">
+      </div>
+      <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+        <input class="w3-input w3-border" type="text" id="LotSpaceId" placeholder="Space ID" required name="Space ID">
+      </div>
+      <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+        <input class="w3-input w3-border" type="text" id="LotStatus" placeholder="Status" required name="Status">
+      </div>
+      <button class="w3-button w3-black w3-section w3-left" onclick="App.UpdateParkEmpty()" type="submit">UPDATE</button>
+
+    </div>
+  </div>
+
+<!-- End Page Content -->
+</div>
+
+<!-- Image of location/map -->
+<img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%">
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i>
+  <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+
+<script>
+// Automatic Slideshow - change image every 4 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 4000);
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/web3.min.js"></script>
+<script src="js/truffle-contract.js"></script>
+
+
+
+<script src="js/app.js"></script>
+
+</body>
+</html>
